@@ -1,16 +1,17 @@
-/* initialize class */
-class Rational(numerator: Int, denominator: Int) {
-  require(denominator != 0, "Denominator cannot be zero")
+class Rational(numerator: Int, denominator: Int){
+  require(denominator!=0,"Error,Denominator can't be 0");
+  var rational:Double = numerator.toDouble/denominator.toDouble;
+  def neg(): Unit = {
+    var y = new Rational(-1*numerator,denominator);
+    println("The negetive rational number is "+y.rational)
+  }
 
-  def neg: Rational = Rational(-numerator, denominator)
-
-  /* override the default to string function */
-  override def toString: String = numerator + "/" + denominator
 }
 
-@main def init = {
-  val x = Rational(5, 6);
+object Q1 extends App{
+  var x = new Rational(5,2)
 
-  println("Rational number: " + x)
-  println("Negative Rational number: " + x.neg)
+  println("The rational number is "+x.rational);
+  x.neg()
+
 }

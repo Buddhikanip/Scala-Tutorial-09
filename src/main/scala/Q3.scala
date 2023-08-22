@@ -47,7 +47,7 @@ class Account(id: Int, initial: Double = 0) {
   }
 }
 
-@main def init = {
+object Q3 extends App {
   val acc1 = new Account(1)
   acc1.deposit(100)
   println("")
@@ -64,6 +64,6 @@ class Account(id: Int, initial: Double = 0) {
   acc2.transfer(40, acc1)
   println("")
 
-  /* acc2 balance */
+  /* acc1 balance */
   acc1.currentBalance()
 }
